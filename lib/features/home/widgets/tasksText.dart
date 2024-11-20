@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tasks/Themes/TextStyles.dart';
 
 class Tasks extends StatelessWidget {
   const Tasks({
@@ -7,8 +8,7 @@ class Tasks extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text("Tasks", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold,
-    ),
+    return Text("Tasks", style: myTextStyle.taskStyle,
     );
   }
 }
