@@ -26,7 +26,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   Spacer(),
                   IconButton(
                     onPressed: () { },
-                    icon: Icon(Icons.add),
+                    icon: Icon(Icons.add, size: 32,),
                   )
                 ],
               ),
