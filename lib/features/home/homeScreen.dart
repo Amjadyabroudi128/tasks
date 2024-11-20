@@ -16,10 +16,10 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 30, left: 20),
+              padding: const EdgeInsets.only(top: 30, left: 20, right: 20),
               child: Row(
                 children: [
-                  Text("Tasks", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold,
+                  Text("Tasks", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold,
 
                   ),
                   ),
