@@ -11,13 +11,23 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return  Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.only(top: 30, left: 20),
-              child: Text("Tasks"),
+              padding: const EdgeInsets.only(top: 30, left: 20),
+              child: Row(
+                children: [
+                  Text("Tasks"),
+                  Spacer(),
+                  IconButton(
+                    onPressed: () {  }, 
+                    icon: Icon(Icons.add),
+                    
+                  )
+                ],
+              ),
             )
           ],
         ),
