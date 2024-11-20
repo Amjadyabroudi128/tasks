@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tasks/Themes/icons.dart';
 
 class addButton extends StatefulWidget {
   const addButton({
@@ -14,7 +15,7 @@ class _addButtonState extends State<addButton> {
   Widget build(BuildContext context) {
     return IconButton(
       onPressed: () { },
-      icon: Icon(Icons.add, size: 32,),
+      icon: myIcons.addIcon,
     );
   }
 }
