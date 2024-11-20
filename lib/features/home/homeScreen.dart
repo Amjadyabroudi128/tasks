@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tasks/features/home/widgets/addButton.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -20,14 +21,10 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Row(
                 children: [
                   Text("Tasks", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold,
-
                   ),
                   ),
                   Spacer(),
-                  IconButton(
-                    onPressed: () { },
-                    icon: Icon(Icons.add, size: 32,),
-                  )
+                  addButton()
                 ],
               ),
             )
@@ -37,3 +34,4 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
