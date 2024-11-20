@@ -11,17 +11,27 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
+    return const Scaffold(
+      body: SingleChildScrollView(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
+          children: [
+            Padding(
+              padding: EdgeInsets.only(top: 30, left: 20),
+              child: Text("Tasks"),
+            )
           ],
         ),
       ),
+      // body: Center(
+      //   child: Column(
+      //     mainAxisAlignment: MainAxisAlignment.center,
+      //     children: <Widget>[
+      //       const Text(
+      //         'You have pushed the button this many times:',
+      //       ),
+      //     ],
+      //   ),
+      // ),
     );
   }
 }
