@@ -19,12 +19,14 @@ class _MyHomePageState extends State<MyHomePage> {
               padding: const EdgeInsets.only(top: 30, left: 20),
               child: Row(
                 children: [
-                  Text("Tasks"),
+                  Text("Tasks", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold,
+
+                  ),
+                  ),
                   Spacer(),
                   IconButton(
-                    onPressed: () {  }, 
+                    onPressed: () { },
                     icon: Icon(Icons.add),
-                    
                   )
                 ],
               ),
