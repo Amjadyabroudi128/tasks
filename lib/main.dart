@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:tasks/Themes/appTheme.dart';
 
 import 'features/home/homeScreen.dart';
 
@@ -21,8 +22,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-      ),
+      theme: AppTheme.myTheme,
       home: MyHomePage(),
     );
   }
