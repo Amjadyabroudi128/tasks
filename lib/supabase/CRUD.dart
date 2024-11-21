@@ -16,4 +16,7 @@ class mySupabase {
        await _supabase.from('tasks').insert({'task': taskName, 'isCompleted': false});
      }
    }
+   Future<void> toggleTask(int id, bool isCompleted) async {
+     await _supabase.from('tasks').update({'isCompleted': !isCompleted}).eq('id', id);
+   }
  }
