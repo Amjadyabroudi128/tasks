@@ -28,4 +28,3 @@ class mySupabase {
      await _supabase.from('tasks').delete().eq('id', id);
    }
 }
- }
