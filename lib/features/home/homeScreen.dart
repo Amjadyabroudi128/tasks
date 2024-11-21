@@ -3,6 +3,8 @@ import 'package:tasks/features/home/widgets/addButton.dart';
 import 'package:tasks/features/home/widgets/tasksText.dart';
 import 'package:tasks/supabase/CRUD.dart';
 
+import '../../Themes/icons.dart';
+
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
 
@@ -43,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return  const Scaffold(
+    return  Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -53,10 +55,17 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: [
                   Tasks(),
                   Spacer(),
-                  addButton()
+                  AddButton(myController: myController, addTask: addTask)
                 ],
               ),
-            )
+
+            ),
+            TextField(
+                controller: myController,
+                decoration: InputDecoration(
+                  hintText: 'Enter a task',
+                ),
+              ),
           ],
         ),
       ),

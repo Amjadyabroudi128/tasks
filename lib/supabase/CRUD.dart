@@ -27,4 +27,5 @@ class mySupabase {
    Future<void> deleteTask(int id) async {
      await _supabase.from('tasks').delete().eq('id', id);
    }
+
 }
