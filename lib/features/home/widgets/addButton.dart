@@ -1,20 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:tasks/Themes/icons.dart';
+import '../../../Themes/icons.dart';
+class AddButton extends StatefulWidget {
+  final TextEditingController myController;
+  final Function(String) addTask;
 
-class addButton extends StatefulWidget {
-  const addButton({
-    super.key,
-  });
+  const AddButton({
+    Key? key,
+    required this.myController,
+    required this.addTask,
+  }) : super(key: key);
 
   @override
-  State<addButton> createState() => _addButtonState();
+  State<AddButton> createState() => _AddButtonState();
 }
 
-class _addButtonState extends State<addButton> {
+class _AddButtonState extends State<AddButton> {
   @override
   Widget build(BuildContext context) {
     return IconButton(
-      onPressed: () { },
+      onPressed: () {
+        widget.addTask(widget.myController.text);
+      },
       icon: myIcons.addIcon,
     );
   }
