@@ -19,4 +19,13 @@ class mySupabase {
    Future<void> toggleTask(int id, bool isCompleted) async {
      await _supabase.from('tasks').update({'isCompleted': !isCompleted}).eq('id', id);
    }
+
+   Future<void> editTask(int id, String updatedTask) async {
+     await _supabase.from('tasks').update({'task': updatedTask}).eq('id', id);
+   }
+
+   Future<void> deleteTask(int id) async {
+     await _supabase.from('tasks').delete().eq('id', id);
+   }
+}
  }
