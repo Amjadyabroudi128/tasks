@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tasks/features/home/widgets/addButton.dart';
 import 'package:tasks/features/home/widgets/tasksText.dart';
+import 'package:tasks/supabase/CRUD.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -11,6 +12,8 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   final TextEditingController myController = TextEditingController();
+  final mySupabase DB = mySupabase();
+  List<dynamic> myTasks = [];
 
   @override
   Widget build(BuildContext context) {
