@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tasks/features/home/widgets/addButton.dart';
 import 'package:tasks/features/home/widgets/tasksText.dart';
+import 'package:tasks/features/home/widgets/text.dart';
 import 'package:tasks/supabase/CRUD.dart';
 
 import '../../Themes/icons.dart';
@@ -60,18 +61,14 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
 
             ),
-            TextField(
-                controller: myController,
-                decoration: InputDecoration(
-                  hintText: 'Enter a task',
-                ),
-              ),
+            myText(myController: myController),
           ],
         ),
       ),
     );
   }
 }
+
 
 
 
