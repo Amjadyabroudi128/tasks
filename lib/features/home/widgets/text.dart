@@ -10,10 +10,14 @@ class myText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
-      controller: myController,
-      decoration: InputDecoration(
-        hintText: 'Enter a task',
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: TextField(
+        controller: myController,
+        decoration: InputDecoration(
+          border: OutlineInputBorder(),
+          hintText: 'Enter a task',
+        ),
       ),
     );
   }
