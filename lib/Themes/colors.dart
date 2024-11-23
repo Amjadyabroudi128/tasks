@@ -3,4 +3,5 @@
 
 class ColorHelper {
   static Color addIcon = Colors.black;
+  static Color focusClr = Colors.grey;
  }
