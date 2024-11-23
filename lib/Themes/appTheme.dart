@@ -7,6 +7,13 @@ class AppTheme {
    iconTheme: IconThemeData(
      size: 32,
      color: ColorHelper.addIcon
+   ),
+   inputDecorationTheme: InputDecorationTheme(
+     border: OutlineInputBorder(
+         borderRadius: BorderRadius.all(
+             Radius.circular(13)
+         )
+     ),
    )
  );
  }
