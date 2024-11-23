@@ -15,7 +15,8 @@ class AppTheme {
    ),
    inputDecorationTheme: InputDecorationTheme(
      border: border,
-     focusedBorder: border
+     focusedBorder: border,
+       focusColor: Colors.grey,
    )
  );
  }
