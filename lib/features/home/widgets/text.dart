@@ -15,7 +15,11 @@ class myText extends StatelessWidget {
       child: TextField(
         controller: myController,
         decoration: InputDecoration(
-          border: OutlineInputBorder(),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.all(
+              Radius.circular(13)
+            )
+          ),
           hintText: 'Enter a task',
         ),
       ),
