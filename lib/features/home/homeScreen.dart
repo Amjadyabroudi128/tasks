@@ -66,6 +66,12 @@ class _MyHomePageState extends State<MyHomePage> {
             Expanded(
               child: ListView.builder(
                 itemCount: myTasks.length,
+                itemBuilder: (context, index) {
+                  final task = myTasks[index];
+                  return Card(
+
+                  );
+                },
               ),
             )
           ],
