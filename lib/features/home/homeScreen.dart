@@ -69,7 +69,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 itemBuilder: (context, index) {
                   final task = myTasks[index];
                   return Card(
-
+                    child: ListTile(
+                      leading: Checkbox(
+                        value: task["isCompleted"],
+                        onChanged: (value) {
+                          _toggleTask(task["id"], task["isCompleted"]);
+                        },
+                      ),
+                    ),
                   );
                 },
               ),
