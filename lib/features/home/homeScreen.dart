@@ -62,6 +62,12 @@ class _MyHomePageState extends State<MyHomePage> {
 
             ),
             myText(myController: myController),
+            SizedBox(),
+            Expanded(
+              child: ListView.builder(
+                itemCount: myTasks.length,
+              ),
+            )
           ],
         ),
       ),
