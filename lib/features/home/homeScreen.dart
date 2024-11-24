@@ -69,7 +69,7 @@ class _TaskScreenState extends State<TaskScreen> {
             // Task List
             Expanded(
               child: isEmpty ? Center(
-                child: Text("Please Add Some Tasks :) "),
+                child: Text("Please Add Some Tasks :)", style: TextStyle(fontSize: 24),),
               ) : ListView.builder(
                 itemCount: _tasks.length,
                 itemBuilder: (context, index) {
