@@ -11,7 +11,7 @@ class TaskScreen extends StatefulWidget {
 
 class _TaskScreenState extends State<TaskScreen> {
   final mySupabase _mySupabase = mySupabase();
-  final TextEditingController _controller = TextEditingController();
+  final TextEditingController myController = TextEditingController();
   List<dynamic> _tasks = [];
   bool isEmpty = true;
 
@@ -30,7 +30,7 @@ class _TaskScreenState extends State<TaskScreen> {
 
   Future<void> _addTask(String taskName) async {
     await _mySupabase.addTask(taskName);
-    _controller.clear();
+    myController.clear();
     _fetchTasks(); // Refresh the task list
   }
 
@@ -61,10 +61,10 @@ class _TaskScreenState extends State<TaskScreen> {
               children: [
                 Tasks(),
                 Spacer(),
-                AddButton(myController: _controller, addTask: _addTask)
+                AddButton(myController: myController, addTask: _addTask)
               ],
             ),
-            myText(myController: _controller),
+            myText(myController: myController),
             SizedBox(height: 16),
             // Task List
             Expanded(
