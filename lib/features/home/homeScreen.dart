@@ -4,12 +4,12 @@ import 'package:tasks/features/home/widgets/tasksText.dart';
 import 'package:tasks/features/home/widgets/text.dart';
 import 'package:tasks/supabase/CRUD.dart';
 
-class TaskScreen extends StatefulWidget {
+class myHome extends StatefulWidget {
   @override
-  _TaskScreenState createState() => _TaskScreenState();
+  _myHomeState createState() => _myHomeState();
 }
 
-class _TaskScreenState extends State<TaskScreen> {
+class _myHomeState extends State<myHome> {
   final mySupabase _mySupabase = mySupabase();
   final TextEditingController myController = TextEditingController();
   List<dynamic> _tasks = [];
