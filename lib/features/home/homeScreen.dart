@@ -53,7 +53,7 @@ class _myHomeState extends State<myHome> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.only(top: 30, left: 20, right: 20),
+        padding: EdgeInsets.only(top: 30, left: 15, right: 15),
         child: Column(
           children: [
             // Input Field
