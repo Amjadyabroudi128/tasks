@@ -26,7 +26,7 @@ class AppTheme {
         return BorderSide(color: Colors.green, width: 2);
       } else {
         // Border when the checkbox is not selected
-        return BorderSide(color: Colors.grey, width: 1);
+        return BorderSide(color: ColorHelper.unSelected, width: 2);
       }
     }),
   )
