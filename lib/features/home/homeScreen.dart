@@ -13,7 +13,7 @@ class _myHomeState extends State<myHome> {
   final mySupabase _mySupabase = mySupabase();
   final TextEditingController myController = TextEditingController();
   List<dynamic> _tasks = [];
-  bool isEmpty = true;
+  bool isEmpty = false;
 
   @override
   void initState() {
@@ -68,9 +68,7 @@ class _myHomeState extends State<myHome> {
             SizedBox(height: 16),
             // Task List
             Expanded(
-              child: isEmpty ? Center(
-                child: Text("Please Add Some Tasks :)", style: TextStyle(fontSize: 24),),
-              ) : ListView.builder(
+              child: ListView.builder(
                 itemCount: _tasks.length,
                 itemBuilder: (context, index) {
                   final task = _tasks[index];
