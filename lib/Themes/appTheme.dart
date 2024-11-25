@@ -20,7 +20,7 @@ class AppTheme {
    ),
   checkboxTheme: CheckboxThemeData(
     checkColor: WidgetStateProperty.all(ColorHelper.selectedClr),
-    fillColor: WidgetStateProperty.all(Colors.white),
+    fillColor: WidgetStateProperty.all(ColorHelper.filledClr),
     side: WidgetStateBorderSide.resolveWith((states) {
       if (states.contains(WidgetState.selected)) {
         return BorderSide(color: Colors.green, width: 2);
