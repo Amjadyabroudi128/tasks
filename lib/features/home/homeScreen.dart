@@ -79,8 +79,6 @@ class _myHomeState extends State<myHome> {
                     margin: const EdgeInsets.symmetric(vertical: 4),
                     child: ListTile(
                       leading: Checkbox(
-                        checkColor: Colors.green,
-                        activeColor: Colors.transparent,
                         value: task['isCompleted'],
                         onChanged: (value) => _toggleTask(task['id'], task['isCompleted']),
                       ),

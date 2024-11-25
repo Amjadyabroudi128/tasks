@@ -18,6 +18,10 @@ class AppTheme {
      focusedBorder: border,
        focusColor: ColorHelper.focusClr
    ),
+  checkboxTheme: CheckboxThemeData(
+  checkColor: WidgetStateProperty.all(Colors.green),
+  fillColor: WidgetStateProperty.all(Colors.white),
+  ),
 
- );
+  );
  }
