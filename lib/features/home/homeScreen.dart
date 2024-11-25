@@ -13,7 +13,7 @@ class _myHomeState extends State<myHome> {
   final mySupabase _mySupabase = mySupabase();
   final TextEditingController myController = TextEditingController();
   List<dynamic> _tasks = [];
-  bool isEmpty = false;
+  bool isEmpty = true;
 
   @override
   void initState() {
@@ -25,6 +25,7 @@ class _myHomeState extends State<myHome> {
     final tasks = await _mySupabase.getTasks();
     setState(() {
       _tasks = tasks;
+      isEmpty = _tasks.isEmpty;
     });
   }
 
@@ -53,7 +54,7 @@ class _myHomeState extends State<myHome> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.only(top: 30, left: 15, right: 15),
+        padding: EdgeInsets.only(top: 39, left: 15, right: 15),
         child: Column(
           children: [
             // Input Field
@@ -68,7 +69,9 @@ class _myHomeState extends State<myHome> {
             SizedBox(height: 16),
             // Task List
             Expanded(
-              child: ListView.builder(
+              child: isEmpty ? Center(
+                child: Text("Please Add Some Tasks :)", style: TextStyle(fontSize: 24),),
+              ) : ListView.builder(
                 itemCount: _tasks.length,
                 itemBuilder: (context, index) {
                   final task = _tasks[index];
