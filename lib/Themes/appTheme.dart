@@ -17,6 +17,7 @@ class AppTheme {
      border: border,
      focusedBorder: border,
        focusColor: ColorHelper.focusClr
-   )
+   ),
+
  );
  }
