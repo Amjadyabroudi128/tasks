@@ -6,4 +6,5 @@ class ColorHelper {
   static Color focusClr = Colors.grey;
   static Color selectedClr = Colors.green;
   static Color filledClr = Colors.white;
+  static Color unSelected = Colors.grey[700]!;
  }
