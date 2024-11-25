@@ -19,11 +19,10 @@ class AppTheme {
        focusColor: ColorHelper.focusClr
    ),
   checkboxTheme: CheckboxThemeData(
-    checkColor: WidgetStateProperty.all(Colors.green),
+    checkColor: WidgetStateProperty.all(ColorHelper.selectedClr),
     fillColor: WidgetStateProperty.all(Colors.white),
     side: WidgetStateBorderSide.resolveWith((states) {
       if (states.contains(WidgetState.selected)) {
-        // Border when the checkbox is selected
         return BorderSide(color: Colors.green, width: 2);
       } else {
         // Border when the checkbox is not selected
