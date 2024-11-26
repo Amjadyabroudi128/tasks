@@ -30,7 +30,7 @@ class AppTheme {
     fillColor: WidgetStateProperty.all(ColorHelper.filledClr),
     side: WidgetStateBorderSide.resolveWith((states) {
       if (states.contains(WidgetState.selected)) {
-        return myWidget(Colors.green,2);
+        return myWidget(ColorHelper.selectedClr,2);
       } else {
         // Border when the checkbox is not selected
         return myWidget( ColorHelper.unSelected, 2);
