@@ -1,8 +1,15 @@
 
- import 'package:flutter/material.dart';
+ import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:tasks/Themes/colors.dart';
 
 class AppTheme {
+  BorderSide widgetBorder(myColor, myWidth) {
+    return BorderSide(
+      color: myColor,
+      width: myWidth
+    );
+  }
   static final border = OutlineInputBorder(
       borderRadius: BorderRadius.all(
           Radius.circular(13)
