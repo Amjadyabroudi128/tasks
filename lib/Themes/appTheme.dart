@@ -33,7 +33,7 @@ class AppTheme {
         return myWidget(Colors.green,2);
       } else {
         // Border when the checkbox is not selected
-        return BorderSide(color: ColorHelper.unSelected, width: 2);
+        return myWidget( ColorHelper.unSelected, 2);
       }
     }),
   )
