@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:tasks/Themes/colors.dart';
 
 class AppTheme {
-  BorderSide widgetBorder(myColor, myWidth) {
+  static BorderSide myWidget(Color color, double myWidth) {
     return BorderSide(
-      color: myColor,
-      width: myWidth
+        color: color,
+        width: myWidth
     );
   }
   static final border = OutlineInputBorder(
@@ -30,7 +30,7 @@ class AppTheme {
     fillColor: WidgetStateProperty.all(ColorHelper.filledClr),
     side: WidgetStateBorderSide.resolveWith((states) {
       if (states.contains(WidgetState.selected)) {
-        return BorderSide(color: Colors.green, width: 2);
+        return myWidget(Colors.green,2);
       } else {
         // Border when the checkbox is not selected
         return BorderSide(color: ColorHelper.unSelected, width: 2);
