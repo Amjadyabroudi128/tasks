@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tasks/features/home/widgets/addButton.dart';
+import 'package:tasks/features/home/widgets/emptyTask.dart';
 import 'package:tasks/features/home/widgets/tasksText.dart';
 import 'package:tasks/features/home/widgets/text.dart';
 import 'package:tasks/supabase/CRUD.dart';
@@ -69,9 +70,7 @@ class _myHomeState extends State<myHome> {
             SizedBox(height: 16),
             // Task List
             Expanded(
-              child: isEmpty ? Center(
-                child: Text("Please Add Some Tasks :)", style: TextStyle(fontSize: 24),),
-              ) : ListView.builder(
+              child: isEmpty ? emptyTasks() : ListView.builder(
                 itemCount: _tasks.length,
                 itemBuilder: (context, index) {
                   final task = _tasks[index];
