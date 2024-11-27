@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tasks/Themes/sizedBox.dart';
 import 'package:tasks/features/home/widgets/addButton.dart';
 import 'package:tasks/features/home/widgets/emptyTask.dart';
 import 'package:tasks/features/home/widgets/tasksText.dart';
@@ -67,8 +68,9 @@ class _myHomeState extends State<myHome> {
               ],
             ),
             myText(myController: myController),
-            SizedBox(height: 16),
-            // Task List
+            myBox(
+              height: MediaQuery.of(context).size.height * 0.045,
+            ),
             Expanded(
               child: isEmpty ? emptyTasks() : ListView.builder(
                 itemCount: _tasks.length,
