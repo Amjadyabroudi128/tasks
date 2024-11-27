@@ -6,6 +6,8 @@ import 'package:tasks/features/home/widgets/tasksText.dart';
 import 'package:tasks/features/home/widgets/text.dart';
 import 'package:tasks/supabase/CRUD.dart';
 
+import '../../Themes/mediaQuery.dart';
+
 class myHome extends StatefulWidget {
   @override
   _myHomeState createState() => _myHomeState();
@@ -69,7 +71,7 @@ class _myHomeState extends State<myHome> {
             ),
             myText(myController: myController),
             myBox(
-              height: MediaQuery.of(context).size.height * 0.045,
+              height: myHeight.height(context),
             ),
             Expanded(
               child: isEmpty ? emptyTasks() : ListView.builder(
