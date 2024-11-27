@@ -9,7 +9,7 @@ class emptyTasks extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Text("Please Add Some Tasks :)", style: myTextStyle.empty,),
+      child: Text(myTextStyle.addSomething, style: myTextStyle.empty,),
     );
   }
 }
