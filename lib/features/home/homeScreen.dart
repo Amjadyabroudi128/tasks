@@ -85,12 +85,7 @@ class _myHomeState extends State<myHome> {
                         value: task['isCompleted'],
                         onChanged: (value) => _toggleTask(task['id'], task['isCompleted']),
                       ),
-                      title: Text(
-                        task['task'],
-                        style: TextStyle(
-                          decoration: task['isCompleted'] ? TextDecoration.lineThrough : null,
-                        ),
-                      ),
+                      title: isCompleted(task: task),
                       trailing: Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
@@ -142,3 +137,4 @@ class _myHomeState extends State<myHome> {
     );
   }
 }
+
