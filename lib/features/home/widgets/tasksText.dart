@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tasks/Themes/TextStyles.dart';
+import 'package:tasks/component/TextStyles.dart';
 
 class Tasks extends StatelessWidget {
   const Tasks({

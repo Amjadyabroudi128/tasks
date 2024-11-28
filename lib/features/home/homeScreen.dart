@@ -90,37 +90,37 @@ class _myHomeState extends State<myHome> {
                       trailing: Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          IconButton(
-                            icon: Icon(Icons.edit, color: Colors.blue),
-                            onPressed: () {
-                              final _editController = TextEditingController(text: task['task']);
-                              showDialog(
-                                context: context,
-                                builder: (context) => AlertDialog(
-                                  title: Text('Edit Task'),
-                                  content: TextField(
-                                    controller: _editController,
-                                    decoration: InputDecoration(hintText: 'Update task'),
-                                  ),
-                                  actions: [
-                                    TextButton(
-                                      onPressed: () {
-                                        Navigator.pop(context);
-                                      },
-                                      child: Text('Cancel'),
-                                    ),
-                                    TextButton(
-                                      onPressed: () {
-                                        _editTask(task['id'], _editController.text);
-                                        Navigator.pop(context);
-                                      },
-                                      child: Text('Save'),
-                                    ),
-                                  ],
-                                ),
-                              );
-                            },
-                          ),
+                          // IconButton(
+                          //   icon: Icon(Icons.edit, color: Colors.blue),
+                          //   onPressed: () {
+                          //     final _editController = TextEditingController(text: task['task']);
+                          //     showDialog(
+                          //       context: context,
+                          //       builder: (context) => AlertDialog(
+                          //         title: Text('Edit Task'),
+                          //         content: TextField(
+                          //           controller: _editController,
+                          //           decoration: InputDecoration(hintText: 'Update task'),
+                          //         ),
+                          //         actions: [
+                          //           TextButton(
+                          //             onPressed: () {
+                          //               Navigator.pop(context);
+                          //             },
+                          //             child: Text('Cancel'),
+                          //           ),
+                          //           TextButton(
+                          //             onPressed: () {
+                          //               _editTask(task['id'], _editController.text);
+                          //               Navigator.pop(context);
+                          //             },
+                          //             child: Text('Save'),
+                          //           ),
+                          //         ],
+                          //       ),
+                          //     );
+                          //   },
+                          // ),
                           IconButton(
                             icon: Icon(Icons.delete, color: Colors.red),
                             onPressed: () => _deleteTask(task['id']),
