@@ -4,6 +4,7 @@ import 'package:tasks/component/TextFiled.dart';
 import 'package:tasks/features/home/widgets/addButton.dart';
 import 'package:tasks/features/home/widgets/emptyTask.dart';
 import 'package:tasks/features/home/widgets/isCompleted.dart';
+import 'package:tasks/features/home/widgets/myDialog.dart';
 import 'package:tasks/features/home/widgets/tasksText.dart';
 import 'package:tasks/features/home/widgets/text.dart';
 import 'package:tasks/supabase/CRUD.dart';
@@ -52,15 +53,12 @@ class _myHomeState extends State<myHome> {
     _fetchTasks(); // Refresh the task list
   }
 
-  Future<void> _editTask(int id, String updatedTask) async {
-    await _mySupabase.editTask(id, updatedTask);
-    _fetchTasks(); // Refresh the task list
-  }
+
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
+      onTap: () {
         FocusScope.of(context).requestFocus(FocusNode());
       },
       child: Scaffold(
@@ -81,61 +79,42 @@ class _myHomeState extends State<myHome> {
                 height: myHeight.height(context),
               ),
               Expanded(
-                child: isEmpty ? emptyTasks() : ListView.builder(
-                  itemCount: _tasks.length,
-                  itemBuilder: (context, index) {
-                    final task = _tasks[index];
-                    return Card(
-                      margin: const EdgeInsets.symmetric(vertical: 4),
-                      child: GestureDetector(
-                        onTap: (){
-                              final _editController = TextEditingController(text: task['task']);
-                              showDialog(
-                                context: context,
-                                builder: (context) => AlertDialog(
-                                  title: Text('Edit Task'),
-                                  content: kTextField(
-                                    myController: _editController,
-                                    hintText: "Update Task",
-                                  ),
-                                  actions: [
-                                    TextButton(
-                                      onPressed: () {
-                                        Navigator.pop(context);
-                                      },
-                                      child: Text('Cancel'),
-                                    ),
-                                    TextButton(
-                                      onPressed: () {
-                                        _editTask(task['id'], _editController.text);
-                                        Navigator.pop(context);
-                                      },
-                                      child: Text('Save'),
+                child: isEmpty
+                    ? emptyTasks()
+                    : ListView.builder(
+                        itemCount: _tasks.length,
+                        itemBuilder: (context, index) {
+                          final task = _tasks[index];
+                          return Card(
+                            margin: const EdgeInsets.symmetric(vertical: 4),
+                            child: GestureDetector(
+                              onTap: () {
+                                final _editController =
+                                    TextEditingController(text: task['task']);
+                                myDialog(context, _editController, task, _fetchTasks);
+                              },
+                              child: MYlist(
+                                leading: Checkbox(
+                                  value: task['isCompleted'],
+                                  onChanged: (value) => _toggleTask(
+                                      task['id'], task['isCompleted']),
+                                ),
+                                title: isCompleted(task: task),
+                                trailing: Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    IconButton(
+                                      icon:
+                                          Icon(Icons.delete, color: Colors.red),
+                                      onPressed: () => _deleteTask(task['id']),
                                     ),
                                   ],
                                 ),
-                              );
-                        },
-                        child: MYlist(
-                          leading: Checkbox(
-                            value: task['isCompleted'],
-                            onChanged: (value) => _toggleTask(task['id'], task['isCompleted']),
-                          ),
-                          title: isCompleted(task: task),
-                          trailing: Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              IconButton(
-                                icon: Icon(Icons.delete, color: Colors.red),
-                                onPressed: () => _deleteTask(task['id']),
                               ),
-                            ],
-                          ),
-                        ),
+                            ),
+                          );
+                        },
                       ),
-                    );
-                  },
-                ),
               ),
             ],
           ),
@@ -143,5 +122,5 @@ class _myHomeState extends State<myHome> {
       ),
     );
   }
-}
 
+}
