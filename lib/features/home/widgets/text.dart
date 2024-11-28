@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tasks/component/TextFiled.dart';
 
 class myText extends StatelessWidget {
   const myText({
@@ -12,11 +13,9 @@ class myText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(2.0),
-      child: TextField(
-        controller: myController,
-        decoration: InputDecoration(
-          hintText: 'Enter a task',
-        ),
+      child: kTextField(
+        myController: myController,
+        hintText: "Enter a Task",
       ),
     );
   }
