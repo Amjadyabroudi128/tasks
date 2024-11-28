@@ -60,7 +60,7 @@ class _myHomeState extends State<myHome> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        FocusScope.of(context).requestFocus(new FocusNode());
+        FocusScope.of(context).requestFocus(FocusNode());
       },
       child: Scaffold(
         body: Padding(
@@ -86,51 +86,50 @@ class _myHomeState extends State<myHome> {
                     final task = _tasks[index];
                     return Card(
                       margin: const EdgeInsets.symmetric(vertical: 4),
-                      child: MYlist(
-                        leading: Checkbox(
-                          value: task['isCompleted'],
-                          onChanged: (value) => _toggleTask(task['id'], task['isCompleted']),
-                        ),
-                        title: isCompleted(task: task),
-                        trailing: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            // IconButton(
-                            //   icon: Icon(Icons.edit, color: Colors.blue),
-                            //   onPressed: () {
-                            //     final _editController = TextEditingController(text: task['task']);
-                            //     showDialog(
-                            //       context: context,
-                            //       builder: (context) => AlertDialog(
-                            //         title: Text('Edit Task'),
-                            //         content: TextField(
-                            //           controller: _editController,
-                            //           decoration: InputDecoration(hintText: 'Update task'),
-                            //         ),
-                            //         actions: [
-                            //           TextButton(
-                            //             onPressed: () {
-                            //               Navigator.pop(context);
-                            //             },
-                            //             child: Text('Cancel'),
-                            //           ),
-                            //           TextButton(
-                            //             onPressed: () {
-                            //               _editTask(task['id'], _editController.text);
-                            //               Navigator.pop(context);
-                            //             },
-                            //             child: Text('Save'),
-                            //           ),
-                            //         ],
-                            //       ),
-                            //     );
-                            //   },
-                            // ),
-                            IconButton(
-                              icon: Icon(Icons.delete, color: Colors.red),
-                              onPressed: () => _deleteTask(task['id']),
-                            ),
-                          ],
+                      child: GestureDetector(
+                        onTap: (){
+                              final _editController = TextEditingController(text: task['task']);
+                              showDialog(
+                                context: context,
+                                builder: (context) => AlertDialog(
+                                  title: Text('Edit Task'),
+                                  content: TextField(
+                                    controller: _editController,
+                                    decoration: InputDecoration(hintText: 'Update task'),
+                                  ),
+                                  actions: [
+                                    TextButton(
+                                      onPressed: () {
+                                        Navigator.pop(context);
+                                      },
+                                      child: Text('Cancel'),
+                                    ),
+                                    TextButton(
+                                      onPressed: () {
+                                        _editTask(task['id'], _editController.text);
+                                        Navigator.pop(context);
+                                      },
+                                      child: Text('Save'),
+                                    ),
+                                  ],
+                                ),
+                              );
+                        },
+                        child: MYlist(
+                          leading: Checkbox(
+                            value: task['isCompleted'],
+                            onChanged: (value) => _toggleTask(task['id'], task['isCompleted']),
+                          ),
+                          title: isCompleted(task: task),
+                          trailing: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              IconButton(
+                                icon: Icon(Icons.delete, color: Colors.red),
+                                onPressed: () => _deleteTask(task['id']),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     );
