@@ -113,16 +113,6 @@ class _myHomeState extends State<myHome> {
                                         task['id'], task['isCompleted']),
                                   ),
                                   title: isCompleted(task: task),
-                                  // trailing: Row(
-                                  //   mainAxisSize: MainAxisSize.min,
-                                  //   children: [
-                                  //     IconButton(
-                                  //       icon:
-                                  //           Icon(Icons.delete, color: Colors.red),
-                                  //       onPressed: () => _deleteTask(task['id']),
-                                  //     ),
-                                  //   ],
-                                  // ),
                                 ),
                               ),
                             ),
