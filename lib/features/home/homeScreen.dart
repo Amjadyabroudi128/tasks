@@ -93,22 +93,36 @@ class _myHomeState extends State<myHome> {
                                     TextEditingController(text: task['task']);
                                 myDialog(context, _editController, task, _fetchTasks);
                               },
-                              child: MYlist(
-                                leading: Checkbox(
-                                  value: task['isCompleted'],
-                                  onChanged: (value) => _toggleTask(
-                                      task['id'], task['isCompleted']),
+                              child: Dismissible(
+                                background: Container(
+                                  color: Colors.red,
+                                  child: Icon(Icons.delete, color: Colors.white,),
                                 ),
-                                title: isCompleted(task: task),
-                                trailing: Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    IconButton(
-                                      icon:
-                                          Icon(Icons.delete, color: Colors.red),
-                                      onPressed: () => _deleteTask(task['id']),
-                                    ),
-                                  ],
+                                onDismissed: (DismissDirection direction){
+                                  setState(() {
+                                    _tasks.removeAt(index);
+                                    // this removes task from list to update the tree immediately
+                                  });
+                                  _deleteTask(task["id"]);
+                                },
+                                key: ValueKey(task["id"]),
+                                child: MYlist(
+                                  leading: Checkbox(
+                                    value: task['isCompleted'],
+                                    onChanged: (value) => _toggleTask(
+                                        task['id'], task['isCompleted']),
+                                  ),
+                                  title: isCompleted(task: task),
+                                  // trailing: Row(
+                                  //   mainAxisSize: MainAxisSize.min,
+                                  //   children: [
+                                  //     IconButton(
+                                  //       icon:
+                                  //           Icon(Icons.delete, color: Colors.red),
+                                  //       onPressed: () => _deleteTask(task['id']),
+                                  //     ),
+                                  //   ],
+                                  // ),
                                 ),
                               ),
                             ),
