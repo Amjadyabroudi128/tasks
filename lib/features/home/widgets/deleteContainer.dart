@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tasks/Themes/colors.dart';
 
 class deleteContainer extends StatelessWidget {
   const deleteContainer({
@@ -8,7 +9,7 @@ class deleteContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.red,
+      color: ColorHelper.delete,
       child: Icon(Icons.delete, color: Colors.white,),
     );
   }
