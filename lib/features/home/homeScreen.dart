@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tasks/component/ListTile.dart';
 import 'package:tasks/features/home/widgets/addButton.dart';
+import 'package:tasks/features/home/widgets/deleteContainer.dart';
 import 'package:tasks/features/home/widgets/emptyTask.dart';
 import 'package:tasks/features/home/widgets/isCompleted.dart';
 import 'package:tasks/features/home/widgets/myDialog.dart';
@@ -93,10 +94,7 @@ class _myHomeState extends State<myHome> {
                                 myDialog(context, _editController, task, _fetchTasks);
                               },
                               child: Dismissible(
-                                background: Container(
-                                  color: Colors.red,
-                                  child: Icon(Icons.delete, color: Colors.white,),
-                                ),
+                                background: deleteContainer(),
                                 onDismissed: (DismissDirection direction){
                                   setState(() {
                                     _tasks.removeAt(index);
