@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tasks/Themes/colors.dart';
+import 'package:tasks/Themes/icons.dart';
 
 class deleteContainer extends StatelessWidget {
   const deleteContainer({
@@ -10,7 +11,7 @@ class deleteContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: ColorHelper.delete,
-      child: Icon(Icons.delete, color: Colors.white,),
+      child: myIcons.deleteIcon,
     );
   }
 }
