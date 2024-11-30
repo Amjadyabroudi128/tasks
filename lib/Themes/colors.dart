@@ -7,4 +7,5 @@ class ColorHelper {
   static Color selectedClr = Colors.green;
   static Color filledClr = Colors.white;
   static Color unSelected = Colors.grey[700]!;
+  static Color delete = Colors.red;
  }
