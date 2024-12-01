@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tasks/component/textButton.dart';
 
 import '../../../component/TextFiled.dart';
 import '../../../supabase/CRUD.dart';
@@ -27,7 +28,7 @@ Future<dynamic> myDialog(
           },
           child: Text('Cancel'),
         ),
-        TextButton(
+        kTextBtn(
           onPressed: () async {
             if (_editController.text.isNotEmpty) {
               await _editTask(task['id'], _editController.text);
