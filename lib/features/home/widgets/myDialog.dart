@@ -22,7 +22,7 @@ Future<dynamic> myDialog(
         hintText: "Update Task",
       ),
       actions: [
-        TextButton(
+        kTextBtn(
           onPressed: () {
             Navigator.pop(context);
           },
