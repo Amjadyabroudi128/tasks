@@ -36,7 +36,7 @@ Future<dynamic> myDialog(
               Navigator.pop(context);
             } else {
               ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(content: Text('Task cannot be empty')),
+                SnackBar(content: Text(Strings.noEmpty)),
               );
             }
           },
