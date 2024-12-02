@@ -17,7 +17,7 @@ Future<dynamic> myDialog(
   return showDialog(
     context: context,
     builder: (context) => AlertDialog(
-      title: Text('Edit Task'),
+      title: Text(Strings.edit),
       content: kTextField(
         myController: _editController,
         hintText: Strings.update,
