@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tasks/component/Strings.dart';
+import 'package:tasks/component/snackBar.dart';
 import 'package:tasks/component/textButton.dart';
 
 import '../../../component/TextFiled.dart';
@@ -35,9 +36,7 @@ Future<dynamic> myDialog(
               await _editTask(task['id'], _editController.text);
               Navigator.pop(context);
             } else {
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(content: Text(Strings.noEmpty)),
-              );
+              showSnackBar(context, Strings.noEmpty);
             }
           },
           child: Text(Strings.save),
