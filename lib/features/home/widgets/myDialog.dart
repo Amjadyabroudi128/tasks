@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tasks/component/Strings.dart';
 import 'package:tasks/component/textButton.dart';
 
 import '../../../component/TextFiled.dart';
@@ -19,7 +20,7 @@ Future<dynamic> myDialog(
       title: Text('Edit Task'),
       content: kTextField(
         myController: _editController,
-        hintText: "Update Task",
+        hintText: Strings.update,
       ),
       actions: [
         kTextBtn(
