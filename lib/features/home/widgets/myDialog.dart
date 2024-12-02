@@ -27,7 +27,7 @@ Future<dynamic> myDialog(
           onPressed: () {
             Navigator.pop(context);
           },
-          child: Text('Cancel'),
+          child: Text(Strings.cancel),
         ),
         kTextBtn(
           onPressed: () async {
