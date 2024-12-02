@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tasks/component/ListTile.dart';
 import 'package:tasks/features/home/widgets/addButton.dart';
 import 'package:tasks/features/home/widgets/deleteContainer.dart';
+import 'package:tasks/features/home/widgets/deleteDialog.dart';
 import 'package:tasks/features/home/widgets/emptyTask.dart';
 import 'package:tasks/features/home/widgets/isCompleted.dart';
 import 'package:tasks/features/home/widgets/myDialog.dart';
@@ -95,19 +96,21 @@ class _myHomeState extends State<myHome> {
                               },
                               child: Dismissible(
                                 background: deleteContainer(),
-                                onDismissed: (DismissDirection direction){
-                                  setState(() {
-                                    _tasks.removeAt(index);
-                                    // this removes task from list to update the tree immediately
-                                  });
-                                  _deleteTask(task["id"]);
-                                },
                                 key: ValueKey(task["id"]),
+                                confirmDismiss: (DismissDirection direction) async {
+                                  // Show confirmation dialog and await user's decision
+                                  return await deleteDialog(context, task);
+                                },
+                                onDismissed: (DismissDirection direction) {
+                                  setState(() {
+                                    _tasks.removeAt(index); // Remove task from list
+                                  });
+                                  _deleteTask(task["id"]); // Call delete task function
+                                },
                                 child: MYlist(
                                   leading: Checkbox(
                                     value: task['isCompleted'],
-                                    onChanged: (value) => _toggleTask(
-                                        task['id'], task['isCompleted']),
+                                    onChanged: (value) => _toggleTask(task['id'], task['isCompleted']),
                                   ),
                                   title: isCompleted(task: task),
                                 ),
@@ -123,5 +126,4 @@ class _myHomeState extends State<myHome> {
       ),
     );
   }
-
 }
