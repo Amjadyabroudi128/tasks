@@ -40,7 +40,7 @@ Future<dynamic> myDialog(
               );
             }
           },
-          child: Text('Save'),
+          child: Text(Strings.save),
         ),
       ],
     ),
