@@ -4,4 +4,5 @@
   static String cancel = "Cancel";
   static String noEmpty = "Task cannot be empty";
   static String save = "Save";
+  static String sure = "Are you Sure ?";
  }

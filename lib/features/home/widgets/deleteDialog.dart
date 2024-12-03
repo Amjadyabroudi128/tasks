@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tasks/component/Strings.dart';
 
 Future<bool?> deleteDialog(BuildContext context, task) {
   return showDialog(
@@ -6,7 +7,7 @@ Future<bool?> deleteDialog(BuildContext context, task) {
     builder: (BuildContext context) {
       return AlertDialog(
         title: Text("about to delete ${task["task"]}"),
-        content: Text('Are you sure?'),
+        content: Text(Strings.sure),
         actions: [
           TextButton(
             onPressed: () => Navigator.of(context).pop(false), // Don't dismiss
