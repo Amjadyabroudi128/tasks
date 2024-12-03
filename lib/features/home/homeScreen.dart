@@ -116,9 +116,9 @@ class _myHomeState extends State<myHome> {
                                   trailing: const Row(
                                     mainAxisSize: MainAxisSize.min,
                                     children: [
-                                      Icon(Icons.arrow_back, color: Colors.grey,),
+                                      Icon(Icons.arrow_back, color: Colors.grey, size: 29,),
                                       myBox(width: 3,),
-                                      Text("Slide to delete")
+                                      Text("Slide to delete", style: TextStyle(fontSize: 11),)
                                     ],
                                   ),
                                 ),
