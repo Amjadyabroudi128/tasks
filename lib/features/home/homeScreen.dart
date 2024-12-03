@@ -113,6 +113,7 @@ class _myHomeState extends State<myHome> {
                                     onChanged: (value) => _toggleTask(task['id'], task['isCompleted']),
                                   ),
                                   title: isCompleted(task: task),
+                                  trailing: Icon(Icons.arrow_back, color: Colors.grey,),
                                 ),
                               ),
                             ),
