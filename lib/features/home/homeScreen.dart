@@ -113,7 +113,14 @@ class _myHomeState extends State<myHome> {
                                     onChanged: (value) => _toggleTask(task['id'], task['isCompleted']),
                                   ),
                                   title: isCompleted(task: task),
-                                  trailing: Icon(Icons.arrow_back, color: Colors.grey,),
+                                  trailing: const Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      Icon(Icons.arrow_back, color: Colors.grey,),
+                                      myBox(width: 3,),
+                                      Text("Slide to delete")
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),
