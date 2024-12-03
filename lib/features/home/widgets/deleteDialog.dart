@@ -14,7 +14,7 @@ Future<bool?> deleteDialog(BuildContext context, task) {
             onPressed: () => Navigator.of(context).pop(false), // Don't dismiss
             child: Text('Cancel'),
           ),
-          TextButton(
+          kTextBtn(
             onPressed: () => Navigator.of(context).pop(true), // Confirm dismissal
             child: Text('Delete'),
           ),
