@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tasks/Themes/icons.dart';
 import 'package:tasks/component/ListTile.dart';
 import 'package:tasks/component/Strings.dart';
+import 'package:tasks/component/TextStyles.dart';
 import 'package:tasks/features/home/widgets/addButton.dart';
 import 'package:tasks/features/home/widgets/deleteContainer.dart';
 import 'package:tasks/features/home/widgets/deleteDialog.dart';
@@ -120,7 +121,7 @@ class _myHomeState extends State<myHome> {
                                     children: [
                                       myIcons.slide,
                                       const myBox(width: 3,),
-                                      Text(Strings.slide, style: TextStyle(fontSize: 11,color: Colors.grey),)
+                                      Text(Strings.slide, style: myTextStyle.slide,)
                                     ],
                                   ),
                                 ),
