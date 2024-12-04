@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tasks/Themes/icons.dart';
 import 'package:tasks/component/ListTile.dart';
 import 'package:tasks/features/home/widgets/addButton.dart';
 import 'package:tasks/features/home/widgets/deleteContainer.dart';
@@ -113,10 +114,10 @@ class _myHomeState extends State<myHome> {
                                     onChanged: (value) => _toggleTask(task['id'], task['isCompleted']),
                                   ),
                                   title: isCompleted(task: task),
-                                  trailing: const Row(
+                                  trailing:  Row(
                                     mainAxisSize: MainAxisSize.min,
                                     children: [
-                                      Icon(Icons.arrow_back, color: Colors.grey, size: 29,),
+                                      myIcons.slide,
                                       myBox(width: 3,),
                                       Text("Slide to delete", style: TextStyle(fontSize: 11),)
                                     ],
