@@ -7,4 +7,5 @@
   static String sure = "Are you Sure ?";
   static String delete = "Delete";
   static String slide = "Slide to Delete";
+  static String addSomething = "Please Add Some Tasks :)";
  }
