@@ -6,4 +6,5 @@
   static String save = "Save";
   static String sure = "Are you Sure ?";
   static String delete = "Delete";
+  static String slide = "Slide to Delete";
  }

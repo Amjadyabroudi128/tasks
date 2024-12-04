@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tasks/Themes/icons.dart';
 import 'package:tasks/component/ListTile.dart';
+import 'package:tasks/component/Strings.dart';
 import 'package:tasks/features/home/widgets/addButton.dart';
 import 'package:tasks/features/home/widgets/deleteContainer.dart';
 import 'package:tasks/features/home/widgets/deleteDialog.dart';
@@ -118,8 +119,8 @@ class _myHomeState extends State<myHome> {
                                     mainAxisSize: MainAxisSize.min,
                                     children: [
                                       myIcons.slide,
-                                      myBox(width: 3,),
-                                      Text("Slide to delete", style: TextStyle(fontSize: 11),)
+                                      const myBox(width: 3,),
+                                      Text(Strings.slide, style: TextStyle(fontSize: 11),)
                                     ],
                                   ),
                                 ),
