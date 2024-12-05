@@ -17,7 +17,7 @@ Future<bool?> deleteDialog(BuildContext context, task) {
           ),
           kTextBtn(
             onPressed: () => Navigator.of(context).pop(true), // Confirm dismissal
-            child: Text(Strings.delete, style: TextStyle(fontSize: 20, color: Colors.red),),
+            child: Text(Strings.delete, style: myTextStyle.confirm,),
           ),
         ],
       );
