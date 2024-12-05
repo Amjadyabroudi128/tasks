@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tasks/component/Strings.dart';
+import 'package:tasks/component/TextStyles.dart';
 import 'package:tasks/component/textButton.dart';
 
 Future<bool?> deleteDialog(BuildContext context, task) {
@@ -12,7 +13,7 @@ Future<bool?> deleteDialog(BuildContext context, task) {
         actions: [
           kTextBtn(
             onPressed: () => Navigator.of(context).pop(false), // Don't dismiss
-            child: Text(Strings.cancel, style: TextStyle(fontSize: 20, color: Colors.black),),
+            child: Text(Strings.cancel, style: myTextStyle.dismiss),
           ),
           kTextBtn(
             onPressed: () => Navigator.of(context).pop(true), // Confirm dismissal
