@@ -9,4 +9,5 @@ class ColorHelper {
   static Color unSelected = Colors.grey[700]!;
   static Color delete = Colors.red;
   static Color slideT = Colors.grey;
+  static Color confirm = Colors.red[800]!;
  }
