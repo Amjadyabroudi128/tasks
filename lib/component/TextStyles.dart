@@ -11,5 +11,5 @@ class myTextStyle {
   static TextStyle empty = TextStyle(fontSize: myFonts.empty24);
   static TextStyle slide = TextStyle(fontSize: 12, color: ColorHelper.slideT);
   static TextStyle dismiss = TextStyle(fontSize: myFonts.CD20, color: ColorHelper.addIcon);
-  static TextStyle confirm = TextStyle(fontSize: 20, color: ColorHelper.confirm);
+  static TextStyle confirm = TextStyle(fontSize: myFonts.CD20, color: ColorHelper.confirm);
  }
