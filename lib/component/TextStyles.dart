@@ -6,7 +6,7 @@ import 'package:tasks/Themes/fontWeight.dart';
 import 'package:tasks/fontSizes.dart';
 
 class myTextStyle {
-  static TextStyle taskStyle = TextStyle(fontSize: 25, fontWeight: fontWeightHelper.bold,
+  static TextStyle taskStyle = TextStyle(fontSize: myFonts.Task25, fontWeight: fontWeightHelper.bold,
   );
   static TextStyle empty = TextStyle(fontSize: myFonts.empty24);
   static TextStyle slide = TextStyle(fontSize: myFonts.S12, color: ColorHelper.slideT);
