@@ -108,7 +108,7 @@ class _myHomeState extends State<myHome> {
                                   setState(() {
                                     _tasks.removeAt(index); // Remove task from list
                                   });
-                                  _deleteTask(task["id"]); // Call delete task function
+                                  _deleteTask(task["id"]);
                                 },
                                 child: MYlist(
                                   leading: Checkbox(
