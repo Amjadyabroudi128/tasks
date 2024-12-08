@@ -9,4 +9,5 @@
   static String slide = "Slide to Delete";
   static String addSomething = "Please Add Some Tasks :)";
   static String tasks = "tasks";
+  static String hint = "Enter a Task";
  }
