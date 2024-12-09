@@ -90,6 +90,9 @@ class _myHomeState extends State<myHome> {
                         itemBuilder: (context, index) {
                           final task = _tasks[index];
                           return Container(
+                            decoration: BoxDecoration(
+
+                            ),
                             child: Card(
                               margin: const EdgeInsets.symmetric(vertical: 4),
                               child: GestureDetector(
