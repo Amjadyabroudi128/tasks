@@ -89,31 +89,34 @@ class _myHomeState extends State<myHome> {
                         itemCount: _tasks.length,
                         itemBuilder: (context, index) {
                           final task = _tasks[index];
-                          return Container(
-                            decoration: BoxDecoration(
-
-                            ),
-                            child: Card(
-                              margin: const EdgeInsets.symmetric(vertical: 4),
-                              child: GestureDetector(
-                                onTap: () {
-                                  final _editController =
-                                      TextEditingController(text: task['task']);
-                                  myDialog(context, _editController, task, _fetchTasks);
+                          return Card(
+                            margin: const EdgeInsets.symmetric(vertical: 4),
+                            child: GestureDetector(
+                              onTap: () {
+                                final _editController =
+                                    TextEditingController(text: task['task']);
+                                myDialog(context, _editController, task, _fetchTasks);
+                              },
+                              child: Dismissible(
+                                background: deleteContainer(),
+                                key: ValueKey(task["id"]),
+                                confirmDismiss: (DismissDirection direction) async {
+                                  // Show confirmation dialog and await user's decision
+                                  return await deleteDialog(context, task);
                                 },
-                                child: Dismissible(
-                                  background: deleteContainer(),
-                                  key: ValueKey(task["id"]),
-                                  confirmDismiss: (DismissDirection direction) async {
-                                    // Show confirmation dialog and await user's decision
-                                    return await deleteDialog(context, task);
-                                  },
-                                  onDismissed: (DismissDirection direction) {
-                                    setState(() {
-                                      _tasks.removeAt(index); // Remove task from list
-                                    });
-                                    _deleteTask(task["id"]);
-                                  },
+                                onDismissed: (DismissDirection direction) {
+                                  setState(() {
+                                    _tasks.removeAt(index); // Remove task from list
+                                  });
+                                  _deleteTask(task["id"]);
+                                },
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    border: Border.all(
+                                      color: Colors.black,
+                                      width: 2
+                                    )
+                                  ),
                                   child: MYlist(
                                     leading: completed(task),
                                     title: isCompleted(task: task),
