@@ -89,37 +89,39 @@ class _myHomeState extends State<myHome> {
                         itemCount: _tasks.length,
                         itemBuilder: (context, index) {
                           final task = _tasks[index];
-                          return Card(
-                            margin: const EdgeInsets.symmetric(vertical: 4),
-                            child: GestureDetector(
-                              onTap: () {
-                                final _editController =
-                                    TextEditingController(text: task['task']);
-                                myDialog(context, _editController, task, _fetchTasks);
-                              },
-                              child: Dismissible(
-                                background: deleteContainer(),
-                                key: ValueKey(task["id"]),
-                                confirmDismiss: (DismissDirection direction) async {
-                                  // Show confirmation dialog and await user's decision
-                                  return await deleteDialog(context, task);
+                          return Container(
+                            child: Card(
+                              margin: const EdgeInsets.symmetric(vertical: 4),
+                              child: GestureDetector(
+                                onTap: () {
+                                  final _editController =
+                                      TextEditingController(text: task['task']);
+                                  myDialog(context, _editController, task, _fetchTasks);
                                 },
-                                onDismissed: (DismissDirection direction) {
-                                  setState(() {
-                                    _tasks.removeAt(index); // Remove task from list
-                                  });
-                                  _deleteTask(task["id"]);
-                                },
-                                child: MYlist(
-                                  leading: completed(task),
-                                  title: isCompleted(task: task),
-                                  trailing:  Row(
-                                    mainAxisSize: MainAxisSize.min,
-                                    children: [
-                                      myIcons.slide,
-                                      const myBox(width: 3,),
-                                      Text(Strings.slide, style: myTextStyle.slide,)
-                                    ],
+                                child: Dismissible(
+                                  background: deleteContainer(),
+                                  key: ValueKey(task["id"]),
+                                  confirmDismiss: (DismissDirection direction) async {
+                                    // Show confirmation dialog and await user's decision
+                                    return await deleteDialog(context, task);
+                                  },
+                                  onDismissed: (DismissDirection direction) {
+                                    setState(() {
+                                      _tasks.removeAt(index); // Remove task from list
+                                    });
+                                    _deleteTask(task["id"]);
+                                  },
+                                  child: MYlist(
+                                    leading: completed(task),
+                                    title: isCompleted(task: task),
+                                    trailing:  Row(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        myIcons.slide,
+                                        const myBox(width: 3,),
+                                        Text(Strings.slide, style: myTextStyle.slide,)
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
