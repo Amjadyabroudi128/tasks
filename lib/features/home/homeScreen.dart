@@ -111,10 +111,7 @@ class _myHomeState extends State<myHome> {
                                   _deleteTask(task["id"]);
                                 },
                                 child: MYlist(
-                                  leading: Checkbox(
-                                    value: task['isCompleted'],
-                                    onChanged: (value) => _toggleTask(task['id'], task['isCompleted']),
-                                  ),
+                                  leading: completed(task),
                                   title: isCompleted(task: task),
                                   trailing:  Row(
                                     mainAxisSize: MainAxisSize.min,
@@ -135,6 +132,13 @@ class _myHomeState extends State<myHome> {
           ),
         ),
       ),
+    );
+  }
+
+  Checkbox completed(task) {
+    return Checkbox(
+      value: task['isCompleted'],
+      onChanged: (value) => _toggleTask(task['id'], task['isCompleted']),
     );
   }
 }
