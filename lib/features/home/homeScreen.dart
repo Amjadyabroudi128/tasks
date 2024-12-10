@@ -112,9 +112,12 @@ class _myHomeState extends State<myHome> {
                                 },
                                 child: Container(
                                   decoration: BoxDecoration(
-                                    border: Border.all(
-                                      color: Colors.black,
-                                      width: 2
+                                    border: Border(
+                                      bottom: BorderSide(
+                                        color: Colors.black,
+                                        width: 2
+                                      ),
+
                                     )
                                   ),
                                   child: MYlist(
