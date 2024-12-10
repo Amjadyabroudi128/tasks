@@ -11,7 +11,7 @@ class containerBorder {
      ),
      right: BorderSide(
          color: ColorHelper.border,
-         width: 2
+         width: 2,
      )
  );
  }
