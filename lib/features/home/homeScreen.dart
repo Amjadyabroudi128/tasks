@@ -115,7 +115,8 @@ class _myHomeState extends State<myHome> {
                                     border: Border(
                                       bottom: BorderSide(
                                         color: Colors.black,
-                                        width: 2
+                                        width: 2,
+                                        style: BorderStyle.solid
                                       ),
 
                                     )
