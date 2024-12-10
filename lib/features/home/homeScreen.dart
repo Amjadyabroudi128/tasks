@@ -3,6 +3,7 @@ import 'package:tasks/Themes/icons.dart';
 import 'package:tasks/component/ListTile.dart';
 import 'package:tasks/component/Strings.dart';
 import 'package:tasks/component/TextStyles.dart';
+import 'package:tasks/component/containerBorder.dart';
 import 'package:tasks/features/home/widgets/addButton.dart';
 import 'package:tasks/features/home/widgets/deleteContainer.dart';
 import 'package:tasks/features/home/widgets/deleteDialog.dart';
@@ -112,17 +113,7 @@ class _myHomeState extends State<myHome> {
                                 },
                                 child: Container(
                                   decoration:  BoxDecoration(
-                                    border: Border(
-                                      bottom: BorderSide(
-                                        color: Colors.black,
-                                        width: 2,
-                                        style: BorderStyle.solid
-                                      ),
-                                      right: BorderSide(
-                                        color: Colors.black,
-                                        width: 2
-                                      )
-                                    )
+                                    border: containerBorder.btm
                                   ),
                                   child: MYlist(
                                     leading: completed(task),
