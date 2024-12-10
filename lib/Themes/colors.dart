@@ -10,4 +10,5 @@ class ColorHelper {
   static Color delete = Colors.red;
   static Color slideT = Colors.grey;
   static Color confirm = Colors.red[800]!;
+  static Color border = Colors.black54;
  }
