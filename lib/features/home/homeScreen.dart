@@ -111,14 +111,17 @@ class _myHomeState extends State<myHome> {
                                   _deleteTask(task["id"]);
                                 },
                                 child: Container(
-                                  decoration: BoxDecoration(
+                                  decoration:  BoxDecoration(
                                     border: Border(
                                       bottom: BorderSide(
                                         color: Colors.black,
                                         width: 2,
                                         style: BorderStyle.solid
                                       ),
-
+                                      right: BorderSide(
+                                        color: Colors.black,
+                                        width: 2
+                                      )
                                     )
                                   ),
                                   child: MYlist(
