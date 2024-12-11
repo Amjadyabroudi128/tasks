@@ -125,7 +125,7 @@ class _myHomeState extends State<myHome> {
                                         children: [
                                           myIcons.slide,
                                           const myBox(width: 3,),
-                                          Text(Strings.slide, style: myTextStyle.slide,)
+
                                         ],
                                       ),
                                     ),
