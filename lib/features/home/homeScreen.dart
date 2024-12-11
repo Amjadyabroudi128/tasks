@@ -10,6 +10,7 @@ import 'package:tasks/features/home/widgets/deleteDialog.dart';
 import 'package:tasks/features/home/widgets/emptyTask.dart';
 import 'package:tasks/features/home/widgets/isCompleted.dart';
 import 'package:tasks/features/home/widgets/myDialog.dart';
+import 'package:tasks/features/home/widgets/slideText.dart';
 import 'package:tasks/features/home/widgets/tasksText.dart';
 import 'package:tasks/features/home/widgets/text.dart';
 import 'package:tasks/supabase/CRUD.dart';
@@ -125,7 +126,7 @@ class _myHomeState extends State<myHome> {
                                         children: [
                                           myIcons.slide,
                                           const myBox(width: 3,),
-
+                                          slideText(),
                                         ],
                                       ),
                                     ),
