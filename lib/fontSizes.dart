@@ -4,4 +4,5 @@
   static double S12 = 12;
   static double Task25 = 25;
   static double sIcon = 29;
+  static double defaultIcon = 32;
  }
