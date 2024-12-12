@@ -2,6 +2,7 @@
  import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tasks/Themes/colors.dart';
+import 'package:tasks/component/containerBorder.dart';
 import 'package:tasks/fontSizes.dart';
 
 class AppTheme {
@@ -11,19 +12,15 @@ class AppTheme {
         width: myWidth
     );
   }
-  static final border = OutlineInputBorder(
-      borderRadius: BorderRadius.all(
-          Radius.circular(13)
-      )
-  );
+
  static final myTheme = ThemeData().copyWith(
    iconTheme: IconThemeData(
      size: myFonts.defaultIcon,
      color: ColorHelper.addIcon
    ),
    inputDecorationTheme: InputDecorationTheme(
-     border: border,
-     focusedBorder: border,
+     border: containerBorder.border,
+     focusedBorder: containerBorder.border,
        focusColor: ColorHelper.focusClr
    ),
   checkboxTheme: CheckboxThemeData(
