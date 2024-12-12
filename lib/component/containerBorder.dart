@@ -14,4 +14,9 @@ class containerBorder {
          width: 2,
      )
  );
+ static final border = OutlineInputBorder(
+     borderRadius: BorderRadius.all(
+         Radius.circular(13)
+     )
+ );
  }
