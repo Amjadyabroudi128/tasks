@@ -2,6 +2,7 @@
  import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tasks/Themes/colors.dart';
+import 'package:tasks/fontSizes.dart';
 
 class AppTheme {
   static BorderSide myWidget(Color color, double myWidth) {
@@ -17,7 +18,7 @@ class AppTheme {
   );
  static final myTheme = ThemeData().copyWith(
    iconTheme: IconThemeData(
-     size: 32,
+     size: myFonts.defaultIcon,
      color: ColorHelper.addIcon
    ),
    inputDecorationTheme: InputDecorationTheme(
@@ -36,7 +37,8 @@ class AppTheme {
         return myWidget( ColorHelper.unSelected, 2);
       }
     }),
-  )
+  ),
+
 
  );
  }
