@@ -123,7 +123,7 @@ class _myHomeState extends State<myHome> {
                                       leading: completed(task),
                                       title: isCompleted(task: task),
                                       trailing:  Row(
-                                        mainAxisSize: MainAxisSize.min,
+                                        mainAxisSize: myPadding.min,
                                         children: [
                                           myIcons.slide,
                                           const myBox(width: 3,),
