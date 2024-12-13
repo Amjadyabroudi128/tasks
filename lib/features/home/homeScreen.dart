@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tasks/Themes/icons.dart';
 import 'package:tasks/component/ListTile.dart';
-import 'package:tasks/component/Strings.dart';
-import 'package:tasks/component/TextStyles.dart';
 import 'package:tasks/component/containerBorder.dart';
 import 'package:tasks/component/paddings.dart';
 import 'package:tasks/features/home/widgets/addButton.dart';
