@@ -2,4 +2,5 @@
 
 class myPadding {
   static EdgeInsetsGeometry home = EdgeInsets.only(top: 39, left: 15, right: 15);
+  static EdgeInsetsGeometry btm = EdgeInsets.only(bottom: 10);
  }
