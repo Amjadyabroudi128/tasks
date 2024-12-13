@@ -4,6 +4,7 @@ import 'package:tasks/component/ListTile.dart';
 import 'package:tasks/component/Strings.dart';
 import 'package:tasks/component/TextStyles.dart';
 import 'package:tasks/component/containerBorder.dart';
+import 'package:tasks/component/paddings.dart';
 import 'package:tasks/features/home/widgets/addButton.dart';
 import 'package:tasks/features/home/widgets/deleteContainer.dart';
 import 'package:tasks/features/home/widgets/deleteDialog.dart';
@@ -69,7 +70,7 @@ class _myHomeState extends State<myHome> {
       },
       child: Scaffold(
         body: Padding(
-          padding: EdgeInsets.only(top: 39, left: 15, right: 15),
+          padding: myPadding.home,
           child: Column(
             children: [
               // Input Field
