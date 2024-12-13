@@ -93,7 +93,7 @@ class _myHomeState extends State<myHome> {
                         itemBuilder: (context, index) {
                           final task = _tasks[index];
                           return Padding(
-                            padding: const EdgeInsets.only(bottom: 10),
+                            padding:  myPadding.btm,
                             child: Card(
                               margin: const EdgeInsets.symmetric(vertical: 4),
                               child: GestureDetector(
