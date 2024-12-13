@@ -95,7 +95,7 @@ class _myHomeState extends State<myHome> {
                           return Padding(
                             padding:  myPadding.btm,
                             child: Card(
-                              margin: const EdgeInsets.symmetric(vertical: 4),
+                              margin: myPadding.card,
                               child: GestureDetector(
                                 onTap: () {
                                   final _editController =
