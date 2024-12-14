@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tasks/component/Strings.dart';
 import 'package:tasks/component/TextFiled.dart';
+import 'package:tasks/component/paddings.dart';
 
 class myText extends StatelessWidget {
   const myText({
@@ -13,7 +14,7 @@ class myText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(2.0),
+      padding: myPadding.tPad,
       child: kTextField(
         myController: myController,
         hintText: Strings.hint,
