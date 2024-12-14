@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tasks/Themes/colors.dart';
 import 'package:tasks/component/TextStyles.dart';
 
 class isCompleted extends StatelessWidget {
@@ -15,7 +16,7 @@ class isCompleted extends StatelessWidget {
       task['task'],
       style: TextStyle(
         decoration: task['isCompleted'] ? myTextStyle.myDecoration: null,
-        decorationColor: Colors.green,
+        decorationColor: ColorHelper.dClr,
         decorationThickness: 2.8
       ),
     );
