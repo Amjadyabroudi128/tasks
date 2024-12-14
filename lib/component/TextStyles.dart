@@ -12,4 +12,5 @@ class myTextStyle {
   static TextStyle slide = TextStyle(fontSize: myFonts.S12, color: ColorHelper.slideT);
   static TextStyle dismiss = TextStyle(fontSize: myFonts.CD20, color: ColorHelper.addIcon);
   static TextStyle confirm = TextStyle(fontSize: myFonts.CD20, color: ColorHelper.confirm);
+  static TextDecoration myDecoration = TextDecoration.lineThrough;
  }
