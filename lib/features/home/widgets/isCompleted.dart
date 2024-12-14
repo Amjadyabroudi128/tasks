@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tasks/component/TextStyles.dart';
 
 class isCompleted extends StatelessWidget {
   const isCompleted({
@@ -13,7 +14,7 @@ class isCompleted extends StatelessWidget {
     return Text(
       task['task'],
       style: TextStyle(
-        decoration: task['isCompleted'] ? TextDecoration.lineThrough : null,
+        decoration: task['isCompleted'] ? myTextStyle.myDecoration: null,
       ),
     );
   }
