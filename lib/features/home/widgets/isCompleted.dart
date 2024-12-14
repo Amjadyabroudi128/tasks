@@ -16,6 +16,7 @@ class isCompleted extends StatelessWidget {
       style: TextStyle(
         decoration: task['isCompleted'] ? myTextStyle.myDecoration: null,
         decorationColor: Colors.green,
+        decorationThickness: 2.8
       ),
     );
   }
