@@ -11,4 +11,5 @@ class ColorHelper {
   static Color slideT = Colors.grey;
   static Color confirm = Colors.red[800]!;
   static Color border = Colors.black54;
+  static Color dClr = Colors.green[600]!;
  }
