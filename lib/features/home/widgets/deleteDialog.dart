@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tasks/component/Strings.dart';
 import 'package:tasks/component/TextStyles.dart';
+import 'package:tasks/component/snackBar.dart';
 import 'package:tasks/component/textButton.dart';
 
 Future<bool?> deleteDialog(BuildContext context, task) {
@@ -16,7 +17,11 @@ Future<bool?> deleteDialog(BuildContext context, task) {
             child: Text(Strings.cancel, style: myTextStyle.dismiss),
           ),
           kTextBtn(
-            onPressed: () => Navigator.of(context).pop(true), // Confirm dismissal
+            // onPressed: () => Navigator.of(context).pop(true), // Confirm dismissal
+            onPressed: (){
+              Navigator.of(context).pop(true);
+              showSnackBar(context, "Task Deleted");
+            },
             child: Text(Strings.delete, style: myTextStyle.confirm,),
           ),
         ],
