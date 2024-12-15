@@ -29,7 +29,7 @@ Future<dynamic> myDialog(
           onPressed: () {
             Navigator.pop(context);
           },
-          child: Text(Strings.cancel, style: TextStyle(fontSize: 17, color: Colors.black),),
+          child: Text(Strings.cancel, style: myTextStyle.cancel,),
         ),
         kTextBtn(
           onPressed: () async {
