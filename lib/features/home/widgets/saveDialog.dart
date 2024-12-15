@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tasks/component/Strings.dart';
+import 'package:tasks/component/TextStyles.dart';
 import 'package:tasks/component/snackBar.dart';
 import 'package:tasks/component/textButton.dart';
 
@@ -39,7 +40,7 @@ Future<dynamic> myDialog(
               showSnackBar(context, Strings.noEmpty);
             }
           },
-          child: Text(Strings.save, style: TextStyle(fontSize: 19, color: Colors.green),),
+          child: Text(Strings.save, style: myTextStyle.save,),
         ),
       ],
     ),
