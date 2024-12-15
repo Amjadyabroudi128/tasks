@@ -8,7 +8,7 @@ Future<bool?> deleteDialog(BuildContext context, task) {
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
-        title: Text("about to delete ${task["task"]}"),
+        title: Text("${Strings.aboutTo} ${task["task"]}"),
         content: Text(Strings.sure),
         actions: [
           kTextBtn(
