@@ -10,4 +10,5 @@
   static String addSomething = "Please Add Some Tasks :)";
   static String tasks = "tasks";
   static String hint = "Enter a Task";
+  static String aboutTo = "About to Delete";
  }
