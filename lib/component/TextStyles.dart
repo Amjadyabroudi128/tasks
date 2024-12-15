@@ -13,4 +13,5 @@ class myTextStyle {
   static TextStyle dismiss = TextStyle(fontSize: myFonts.CD20, color: ColorHelper.addIcon);
   static TextStyle confirm = TextStyle(fontSize: myFonts.CD20, color: ColorHelper.confirm);
   static TextDecoration myDecoration = TextDecoration.lineThrough;
+  static TextStyle save = TextStyle(fontSize: 19, color: Colors.green);
  }
