@@ -12,4 +12,5 @@ class ColorHelper {
   static Color confirm = Colors.red[800]!;
   static Color border = Colors.black54;
   static Color dClr = Colors.green[600]!;
+  static Color save = Colors.green[300]!;
  }
