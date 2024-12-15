@@ -14,4 +14,5 @@ class myTextStyle {
   static TextStyle confirm = TextStyle(fontSize: myFonts.CD20, color: ColorHelper.confirm);
   static TextDecoration myDecoration = TextDecoration.lineThrough;
   static TextStyle save = TextStyle(fontSize: 19, color: Colors.green);
+  static TextStyle cancel = TextStyle(fontSize: 18, color: Colors.black);
  }
