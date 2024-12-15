@@ -8,7 +8,7 @@ import 'package:tasks/features/home/widgets/deleteContainer.dart';
 import 'package:tasks/features/home/widgets/deleteDialog.dart';
 import 'package:tasks/features/home/widgets/emptyTask.dart';
 import 'package:tasks/features/home/widgets/isCompleted.dart';
-import 'package:tasks/features/home/widgets/myDialog.dart';
+import 'package:tasks/features/home/widgets/saveDialog.dart';
 import 'package:tasks/features/home/widgets/slideText.dart';
 import 'package:tasks/features/home/widgets/tasksText.dart';
 import 'package:tasks/features/home/widgets/text.dart';

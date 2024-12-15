@@ -28,7 +28,7 @@ Future<dynamic> myDialog(
           onPressed: () {
             Navigator.pop(context);
           },
-          child: Text(Strings.cancel),
+          child: Text(Strings.cancel, style: TextStyle(fontSize: 17, color: Colors.black),),
         ),
         kTextBtn(
           onPressed: () async {
@@ -39,7 +39,7 @@ Future<dynamic> myDialog(
               showSnackBar(context, Strings.noEmpty);
             }
           },
-          child: Text(Strings.save),
+          child: Text(Strings.save, style: TextStyle(fontSize: 19, color: Colors.green),),
         ),
       ],
     ),
