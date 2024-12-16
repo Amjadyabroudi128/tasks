@@ -5,4 +5,5 @@
   static double Task25 = 25;
   static double sIcon = 29;
   static double defaultIcon = 32;
+  static double save = 19;
  }
