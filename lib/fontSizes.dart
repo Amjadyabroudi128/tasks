@@ -6,4 +6,5 @@
   static double sIcon = 29;
   static double defaultIcon = 32;
   static double save = 19;
+  static double cancel = 10;
  }
