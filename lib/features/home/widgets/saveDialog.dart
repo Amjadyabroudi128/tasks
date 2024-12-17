@@ -42,7 +42,7 @@ Future<dynamic> myDialog(
             if (_editController.text.trim().isEmpty) {
               showSnackBar(context, Strings.noEmpty);
             } else if (_editController.text.trim() == task['task'].toString().trim()) {
-              showSnackBar(context, "Change the task");
+              showSnackBar(context, Strings.change);
             } else {
               await _editTask(task['id'], _editController.text.trim());
               Navigator.pop(context);
