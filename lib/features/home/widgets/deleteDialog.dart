@@ -19,7 +19,7 @@ Future<bool?> deleteDialog(BuildContext context, task) {
           kTextBtn(
             onPressed: (){
               Navigator.of(context).pop(true); // confirm dismissal
-              showSnackBar(context, "Task Deleted");
+              showSnackBar(context, Strings.deleted);
             },
             child: Text(Strings.delete, style: myTextStyle.confirm,),
           ),
