@@ -7,4 +7,5 @@
   static double defaultIcon = 32;
   static double save = 19;
   static double cancel = 10;
+  static double thickness = 2.8;
  }
