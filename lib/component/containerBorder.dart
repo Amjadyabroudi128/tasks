@@ -6,7 +6,7 @@ class containerBorder {
  static Border btm = Border(
      bottom: BorderSide(
          color: ColorHelper.border,
-         width: 2,
+         width: 3.2,
          style: BorderStyle.solid
      ),
      right: BorderSide(
