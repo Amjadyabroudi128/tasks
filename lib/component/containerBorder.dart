@@ -19,4 +19,5 @@ class containerBorder {
          Radius.circular(13)
      )
  );
+ static BorderRadiusGeometry B13 = BorderRadius.circular(13);
  }
