@@ -115,7 +115,8 @@ class _myHomeState extends State<myHome> {
                                   },
                                   child: Container(
                                     decoration:  BoxDecoration(
-                                      border: containerBorder.btm
+                                      border: containerBorder.btm,
+                                      borderRadius: BorderRadius.circular(13)
                                     ),
                                     child: MYlist(
                                       leading: completed(task),
