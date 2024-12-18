@@ -121,14 +121,6 @@ class _myHomeState extends State<myHome> {
                                     child: MYlist(
                                       leading: completed(task),
                                       title: isCompleted(task: task),
-                                      // trailing:  Row(
-                                      //   mainAxisSize: myPadding.min,
-                                      //   children: [
-                                      //     myIcons.slide,
-                                      //     const myBox(width: 3,),
-                                      //     slideText(),
-                                      //   ],
-                                      // ),
                                     ),
                                   ),
                                 ),
