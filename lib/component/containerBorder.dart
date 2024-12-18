@@ -7,7 +7,7 @@ class containerBorder {
      bottom: BorderSide(
          color: ColorHelper.border,
          width: 3.2,
-         style: BorderStyle.solid
+         // style: BorderStyle.solid
      ),
      right: BorderSide(
          color: ColorHelper.border,
