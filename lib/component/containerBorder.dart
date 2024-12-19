@@ -4,15 +4,14 @@ import 'package:tasks/Themes/colors.dart';
 import 'package:tasks/fontSizes.dart';
 
 class containerBorder {
-  static Color myColor = ColorHelper.border;
  static Border btm = Border(
      bottom: BorderSide(
-         color: myColor,
+         color: ColorHelper.myColor,
          width: myFonts.btmBorder,
          // style: BorderStyle.solid
      ),
      right: BorderSide(
-         color: myColor,
+         color: ColorHelper.myColor,
          width: 2,
      )
  );
