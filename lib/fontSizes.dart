@@ -9,4 +9,5 @@
   static double cancel = 10;
   static double thickness = 2.8;
   static double btmBorder = 3.2;
+  static double mWidth = 2;
  }
