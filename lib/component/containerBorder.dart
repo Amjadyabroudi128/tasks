@@ -1,12 +1,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:tasks/Themes/colors.dart';
+import 'package:tasks/fontSizes.dart';
 
 class containerBorder {
  static Border btm = Border(
      bottom: BorderSide(
          color: ColorHelper.border,
-         width: 3.2,
+         width: myFonts.btmBorder,
          // style: BorderStyle.solid
      ),
      right: BorderSide(
