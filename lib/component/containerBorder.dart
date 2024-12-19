@@ -12,7 +12,7 @@ class containerBorder {
      ),
      right: BorderSide(
          color: ColorHelper.myColor,
-         width: 2,
+         width: myFonts.mWidth,
      )
  );
  static final border = OutlineInputBorder(
