@@ -14,9 +14,9 @@ class deleteContainer extends StatelessWidget {
     return Container(
       decoration:  BoxDecoration(
           borderRadius: containerBorder.B13,
-        color: ColorHelper.delete,
+        // color: ColorHelper.delete,
       ),
-      child: myIcons.deleteIcon,
+      // child: myIcons.deleteIcon,
     );
   }
 }
