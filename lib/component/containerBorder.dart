@@ -4,6 +4,7 @@ import 'package:tasks/Themes/colors.dart';
 import 'package:tasks/fontSizes.dart';
 
 class containerBorder {
+  static final BorderRadius B13 = BorderRadius.circular(13);
  static Border btm = Border(
      bottom: BorderSide(
          color: ColorHelper.myColor,
@@ -16,9 +17,6 @@ class containerBorder {
      )
  );
  static final border = OutlineInputBorder(
-     borderRadius: BorderRadius.all(
-         Radius.circular(13)
-     )
+     borderRadius: B13
  );
- static BorderRadiusGeometry B13 = BorderRadius.circular(13);
  }
