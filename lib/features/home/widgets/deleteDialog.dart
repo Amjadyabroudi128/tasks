@@ -10,7 +10,7 @@ Future<bool?> deleteDialog(BuildContext context, task) {
     builder: (BuildContext context) {
       return AlertDialog(
         title: Text("${Strings.aboutTo} ${task["task"]}"),
-        content: Text(Strings.sure),
+        content: Text(Strings.sure, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
         actions: [
           kTextBtn(
             onPressed: () => Navigator.of(context).pop(false), // Don't dismiss
