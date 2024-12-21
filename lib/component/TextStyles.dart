@@ -15,5 +15,5 @@ class myTextStyle {
   static TextDecoration myDecoration = TextDecoration.lineThrough;
   static TextStyle save = TextStyle(fontSize: myFonts.save, color: ColorHelper.save);
   static TextStyle cancel = TextStyle(fontSize: myFonts.cancel, color: ColorHelper.addIcon);
-  static TextStyle sure = TextStyle(fontSize: myFonts.font18, fontWeight: fontWeightHelper.bold, color: Colors.grey[700]);
+  static TextStyle sure = TextStyle(fontSize: myFonts.font18, fontWeight: fontWeightHelper.bold, color: ColorHelper.unSelected);
  }
