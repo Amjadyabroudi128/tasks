@@ -23,4 +23,7 @@ class containerBorder {
      border: containerBorder.btm,
      borderRadius: containerBorder.B13
  );
+ static final Decoration deleteDecoration = BoxDecoration(
+   borderRadius: containerBorder.B13,
+ );
  }
