@@ -12,10 +12,7 @@ class deleteContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration:  BoxDecoration(
-          borderRadius: containerBorder.B13,
-        // color: ColorHelper.delete,
-      ),
+      decoration:  containerBorder.deleteDecoration,
       // child: myIcons.deleteIcon,
     );
   }
