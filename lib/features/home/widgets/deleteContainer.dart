@@ -12,8 +12,10 @@ class deleteContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      alignment: Alignment.centerRight,
+      padding: EdgeInsets.symmetric(horizontal: 10),
       decoration:  containerBorder.deleteDecoration,
-      // child: myIcons.deleteIcon,
+      child: myIcons.deleteIcon,
     );
   }
 }
