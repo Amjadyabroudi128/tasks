@@ -19,4 +19,8 @@ class containerBorder {
  static final border = OutlineInputBorder(
      borderRadius: B13
  );
+ static final Decoration myDecoration = BoxDecoration(
+     border: containerBorder.btm,
+     borderRadius: containerBorder.B13
+ );
  }
