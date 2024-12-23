@@ -12,4 +12,5 @@
   static double mWidth = 2;
   static double C13 = 13;
   static double font18 = 18;
+  static double H10 = 10;
  }
