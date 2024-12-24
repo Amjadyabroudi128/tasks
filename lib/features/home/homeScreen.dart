@@ -3,6 +3,7 @@ import 'package:tasks/Themes/icons.dart';
 import 'package:tasks/component/ListTile.dart';
 import 'package:tasks/component/containerBorder.dart';
 import 'package:tasks/component/paddings.dart';
+import 'package:tasks/component/unfocus.dart';
 import 'package:tasks/features/home/widgets/addButton.dart';
 import 'package:tasks/features/home/widgets/deleteContainer.dart';
 import 'package:tasks/features/home/widgets/deleteDialog.dart';
@@ -64,7 +65,7 @@ class _myHomeState extends State<myHome> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        FocusScope.of(context).requestFocus(FocusNode());
+        unFocus(context);
       },
       child: Scaffold(
         body: Padding(
