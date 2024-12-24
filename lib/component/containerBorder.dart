@@ -26,4 +26,5 @@ class containerBorder {
  static final Decoration deleteDecoration = BoxDecoration(
    borderRadius: containerBorder.B13,
  );
+ static const AlignmentGeometry centre = Alignment.centerRight;
  }
