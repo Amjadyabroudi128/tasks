@@ -37,7 +37,7 @@ class AppTheme {
    textSelectionTheme: TextSelectionThemeData(
      cursorColor: Colors.black38,
      selectionHandleColor: Colors.black,
-
+     selectionColor: Colors.blueGrey
    ),
  );
  }
