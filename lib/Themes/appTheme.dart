@@ -35,7 +35,7 @@ class AppTheme {
     }),
   ),
    textSelectionTheme: TextSelectionThemeData(
-     cursorColor: Colors.black38
+     cursorColor: Colors.black38,
    ),
  );
  }
