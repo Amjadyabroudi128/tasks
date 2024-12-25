@@ -9,7 +9,7 @@ class kTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
-      cursorWidth: cursorWidth ,
+      cursorWidth: cursorWidth,
       controller: myController,
       decoration: InputDecoration(
         hintText: hintText
