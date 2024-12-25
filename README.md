@@ -6,3 +6,7 @@ here is how it looks
 . when the box is checked 
 
 ![Screenshot 2024-12-25 152132](https://github.com/user-attachments/assets/02bb998d-39d5-4fc8-8990-1a5b27bdf6d7)
+
+. edit task 
+
+![image](https://github.com/user-attachments/assets/27380b39-fb54-47ce-bfcb-7bb434d3da75)
