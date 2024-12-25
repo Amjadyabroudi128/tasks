@@ -34,7 +34,8 @@ class AppTheme {
       }
     }),
   ),
+   textSelectionTheme: TextSelectionThemeData(
 
-
+   ),
  );
  }
