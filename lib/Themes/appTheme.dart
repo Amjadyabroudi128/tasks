@@ -39,6 +39,5 @@ class AppTheme {
      selectionHandleColor: Colors.black,
      selectionColor: Colors.blueAccent
    ),
-
  );
  }
