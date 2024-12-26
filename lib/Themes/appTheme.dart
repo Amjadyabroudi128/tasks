@@ -35,7 +35,7 @@ class AppTheme {
     }),
   ),
    textSelectionTheme: TextSelectionThemeData(
-     cursorColor: Colors.black38,
+     cursorColor: ColorHelper.CursorClr,
      selectionHandleColor: Colors.black,
      selectionColor: Colors.blueAccent
    ),
