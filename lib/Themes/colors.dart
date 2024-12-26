@@ -15,4 +15,5 @@ class ColorHelper {
   static Color save = Colors.green[300]!;
   static Color myColor = ColorHelper.border;
   static Color deleteIcon = Colors.red[600]!;
+  static Color CursorClr = Colors.black38;
 }
