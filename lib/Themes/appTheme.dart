@@ -36,7 +36,7 @@ class AppTheme {
   ),
    textSelectionTheme: TextSelectionThemeData(
      cursorColor: ColorHelper.CursorClr,
-     selectionHandleColor: Colors.black,
+     selectionHandleColor: ColorHelper.handle,
      selectionColor: Colors.blueAccent
    ),
  );
