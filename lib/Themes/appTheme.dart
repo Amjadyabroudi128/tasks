@@ -27,7 +27,6 @@ class AppTheme {
   checkboxTheme: CheckboxThemeData(
     checkColor: myState(ColorHelper.selectedClr),
     fillColor: myState(ColorHelper.filledClr),
-    // fillColor: WidgetStateProperty.all(ColorHelper.filledClr),
     side: WidgetStateBorderSide.resolveWith((states) {
       if (states.contains(WidgetState.selected)) {
         return myWidget(ColorHelper.selectedClr,myFonts.mWidth);
