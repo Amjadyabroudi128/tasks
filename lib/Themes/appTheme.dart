@@ -11,7 +11,9 @@ class AppTheme {
         width: myWidth
     );
   }
-
+ static myState(Color color) {
+    return WidgetStatePropertyAll(color);
+ }
  static final myTheme = ThemeData().copyWith(
    iconTheme: IconThemeData(
      size: myFonts.defaultIcon,
@@ -23,7 +25,8 @@ class AppTheme {
        focusColor: ColorHelper.focusClr
    ),
   checkboxTheme: CheckboxThemeData(
-    checkColor: WidgetStateProperty.all(ColorHelper.selectedClr),
+    checkColor: myState(ColorHelper.selectedClr),
+    // checkColor: WidgetStateProperty.all(ColorHelper.selectedClr),
     fillColor: WidgetStateProperty.all(ColorHelper.filledClr),
     side: WidgetStateBorderSide.resolveWith((states) {
       if (states.contains(WidgetState.selected)) {
