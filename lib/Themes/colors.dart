@@ -19,4 +19,5 @@ class ColorHelper {
   static Color handle = Colors.black54;
   static Color accent = Colors.blueAccent;
   static Color label = Colors.grey[800]!;
+  static Color floating = Colors.grey[700]!;
 }
