@@ -16,4 +16,5 @@ class myTextStyle {
   static TextStyle save = TextStyle(fontSize: myFonts.save, color: ColorHelper.save);
   static TextStyle cancel = TextStyle(fontSize: myFonts.cancel, color: ColorHelper.addIcon);
   static TextStyle sure = TextStyle(fontSize: myFonts.font18, fontWeight: fontWeightHelper.bold, color: ColorHelper.unSelected);
+  static TextStyle label = TextStyle(fontSize: 16, color: Colors.grey[800]);
  }
