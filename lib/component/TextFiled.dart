@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class kTextField extends StatelessWidget {
   final String? hintText;
-  final String? label;
+  final Widget? label;
   final TextEditingController? myController;
   final double cursorWidth;
   const kTextField({super.key, this.hintText, this.myController, this.cursorWidth = 2.0, this.label});
@@ -14,7 +14,7 @@ class kTextField extends StatelessWidget {
       controller: myController,
       decoration: InputDecoration(
         hintText: hintText,
-        labelText:
+        label: label
       ),
     );
   }
