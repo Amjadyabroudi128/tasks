@@ -21,6 +21,8 @@ class AppTheme {
    ),
    inputDecorationTheme: InputDecorationTheme(
      border: containerBorder.border,
+     labelStyle: TextStyle(fontSize: 16, color: Colors.grey[800]),
+     floatingLabelStyle: TextStyle(fontSize: 19, color: Colors.grey[700]),
      focusedBorder: containerBorder.border,
        focusColor: ColorHelper.focusClr
    ),

@@ -17,7 +17,6 @@ class myText extends StatelessWidget {
       padding: myPadding.tPad,
       child: kTextField(
         myController: myController,
-        // hintText: Strings.hint,
         label: Text(Strings.hint),
       ),
     );
