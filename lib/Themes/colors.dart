@@ -18,4 +18,5 @@ class ColorHelper {
   static Color CursorClr = Colors.black38;
   static Color handle = Colors.black54;
   static Color accent = Colors.blueAccent;
+  static Color label = Colors.grey[800]!;
 }
