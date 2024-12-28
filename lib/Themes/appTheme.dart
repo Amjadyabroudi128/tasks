@@ -23,7 +23,7 @@ class AppTheme {
    inputDecorationTheme: InputDecorationTheme(
      border: containerBorder.border,
      labelStyle: myTextStyle.label,
-     floatingLabelStyle: TextStyle(fontSize: 19, color: Colors.grey[700]),
+     floatingLabelStyle: myTextStyle.floating,
      focusedBorder: containerBorder.border,
        focusColor: ColorHelper.focusClr
    ),
