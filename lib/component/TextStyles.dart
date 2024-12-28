@@ -17,5 +17,5 @@ class myTextStyle {
   static TextStyle cancel = TextStyle(fontSize: myFonts.cancel, color: ColorHelper.addIcon);
   static TextStyle sure = TextStyle(fontSize: myFonts.font18, fontWeight: fontWeightHelper.bold, color: ColorHelper.unSelected);
   static TextStyle label = TextStyle(fontSize: 16, color: ColorHelper.label);
-  static TextStyle floating = TextStyle(fontSize: 19, color: Colors.grey[700]);
+  static TextStyle floating = TextStyle(fontSize: 19, color: ColorHelper.floating);
  }
