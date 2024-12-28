@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:tasks/Themes/colors.dart';
+import 'package:tasks/component/TextStyles.dart';
 import 'package:tasks/component/containerBorder.dart';
 import 'package:tasks/fontSizes.dart';
 
@@ -21,7 +22,7 @@ class AppTheme {
    ),
    inputDecorationTheme: InputDecorationTheme(
      border: containerBorder.border,
-     labelStyle: TextStyle(fontSize: 16, color: Colors.grey[800]),
+     labelStyle: myTextStyle.label,
      floatingLabelStyle: TextStyle(fontSize: 19, color: Colors.grey[700]),
      focusedBorder: containerBorder.border,
        focusColor: ColorHelper.focusClr
