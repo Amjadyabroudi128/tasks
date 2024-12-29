@@ -14,4 +14,5 @@
   static double font18 = 18;
   static double H10 = 10;
   static double L16 = 16;
+  static double L19 = 19;
  }
