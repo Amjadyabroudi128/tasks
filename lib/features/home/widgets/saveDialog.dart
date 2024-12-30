@@ -25,7 +25,7 @@ Future<dynamic> myDialog(
       title: Text(Strings.edit),
       content: kTextField(
         myController: _editController,
-        hintText: Strings.update,
+        label: Text(Strings.update),
       ),
       actions: [
         kTextBtn(
